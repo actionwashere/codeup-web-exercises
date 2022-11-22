@@ -81,7 +81,6 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-console.log(calculateTip(24.3, 1452.43))
 function calculateTip(percent, bill){
     let tip = (percent / 100) * bill;
     let tipFormatted = tip.toFixed(2);
