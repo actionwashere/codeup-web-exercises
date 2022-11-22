@@ -10,9 +10,11 @@
  */
 
 function sayHello(name){
-    let message = "Hello, " + name + "!";
+    //let message = "Hello, " + name + "!";
+    let message = `Hello, ${name}!`
     return message;
 }
+
 
 /**
  * TODO:
