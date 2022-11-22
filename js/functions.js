@@ -10,7 +10,8 @@
  */
 
 function sayHello(name){
-    return "Hello, " + name + "!";
+    let message = "Hello, " + name + "!";
+    return message;
 }
 
 /**
@@ -22,9 +23,7 @@ function sayHello(name){
  */
 
 let helloMessage = sayHello("Aharown");
-
 console.log(helloMessage);
-
 
 
 /**
