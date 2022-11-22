@@ -117,7 +117,8 @@ alert("You should give a $" + userTip + " tip.");
  */
 
 function applyDiscount(originalPrice, discountPercent) {
-    let discountPrice = (discountPercent/100) * originalPrice;
-    return discountPrice;
+    let discountPrice = (1 - (discountPercent/100))* originalPrice;
+    let discountPriceFormatted = discountPrice.toFixed(2);
+    return discountPriceFormatted;
 
 }
