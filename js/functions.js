@@ -94,7 +94,7 @@ let billTotal = prompt("How much was your bill?"),
 
 calculateTip(billTotal, tipPercent);
 
-alert("You should pay a $" + calculateTip(billTotal, tipPercent).toFixed(2) + " tip.");
+alert("You should give a $" + calculateTip(billTotal, tipPercent).toFixed(2) + " tip.");
 
 /**
  * TODO:
