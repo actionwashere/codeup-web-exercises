@@ -39,7 +39,7 @@ console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -59,8 +59,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+console.log("The random number generated was: " + random);
+console.log("Is " + random + " equal to 2?");
+
 function isTwo(num){
-    return(num == 2);
+    let answer = (num == 2);
+    return answer;
 }
 
 console.log(isTwo(random));
@@ -77,9 +81,11 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+console.log(calculateTip(24.3, 1452.43))
 function calculateTip(percent, bill){
     let tip = (percent / 100) * bill;
-    return tip;
+    let tipFormatted = tip.toFixed(2);
+    return tipFormatted;
 }
 
 /**
@@ -92,9 +98,9 @@ function calculateTip(percent, bill){
 let billTotal = prompt("How much was your bill?"),
     tipPercent = prompt("What percent would you like to tip?");
 
-calculateTip(billTotal, tipPercent);
+let userTip = calculateTip(billTotal, tipPercent);
 
-alert("You should give a $" + calculateTip(billTotal, tipPercent).toFixed(2) + " tip.");
+alert("You should give a $" + userTip + " tip.");
 
 /**
  * TODO:
