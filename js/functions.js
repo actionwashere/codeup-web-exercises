@@ -101,7 +101,7 @@ let billTotal = prompt("How much was your bill?"),
 
 let userTip = calculateTip(billTotal, tipPercent);
 
-alert("You should give a $" + userTip + " tip.");
+alert(`You should give a $${userTip} tip`);
 
 /**
  * TODO:
