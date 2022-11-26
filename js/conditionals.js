@@ -168,3 +168,18 @@ function calculateTotal(luckyNumber, userAmount) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+confirm(`Would you like to enter a number?`) {
+    if (true)
+        let userNumber = prompt(`What number would you like to enter?`) {
+        if (userNumber % 2 == 0 ) {
+            alert(`Your number is even.`)
+            alert(`Your number plus 100 is ${userNumber + 100}.`)
+            alert
+        } else {
+            alert(`Your number is odd.`)
+        }
+    }
+}
+
+function isEven(userNumber);
