@@ -119,66 +119,25 @@ let luckyNumber = Math.floor((Math.random() * 6) + 0);
 console.log(`The random discount number is ${luckyNumber}`);
 let userAmount = prompt(`What is the total amount of your bill?`);
 console.log(`The user's bill is ${userAmount}`);
-console.log(`Your new discounted total is ${calculateTotal(luckyNumber, userAmount)}.`);
+
+calculateTotal(luckyNumber, userAmount);
 
 function calculateTotal(luckyNumber, userAmount) {
 
     if (luckyNumber === 0) {
-        return `Sorry no discount`;
+        alert (`Your lucky number was 0, sorry no discount, your bill is still $${userAmount}`);
     } else if (luckyNumber === 1) {
-        return "$" + (.9 * userAmount);
+        alert (`Your lucky number was 1, your original bill was $${userAmount}, your new discounted price is $${(.9 * userAmount)}`);
     } else if (luckyNumber === 2) {
-        return "$" + (.75 * userAmount);
+        alert (`Your lucky number was 2, your original bill was $${userAmount}, your new discounted price is $${(.75 * userAmount)}`);
     } else if (luckyNumber === 3) {
-        return "$" + (.65 * userAmount);
+        alert (`Your lucky number was 3, your original bill was $${userAmount}, your new discounted price is $${(.65 * userAmount)}`);
     } else if (luckyNumber === 4) {
-        return "$" + (.5 * userAmount);
+        alert (`Your lucky number was 4, your original bill was $${userAmount}, your new discounted price is $${(.5 * userAmount)}`);
     } else {
-        return `Congratulations, you get everything for FREE!!!`
+        alert (`Your lucky number was 5, Congratulations, you get everything for FREE!!!`)
     }
 }
-
-
-
-
-// let luckyNumber = Math.floor((Math.random() * 5) + 0);
-// console.log(luckyNumber);
-//
-// let userAmount = prompt("How much is the total cost?");
-//
-//
-// function luckyNumberConverted(luckyNumber){
-//     if (luckyNumber == 0);
-//     luckyNumber = 0;
-
-
-
-// function calculateTotal(luckyNumber, userAmount){
-//     let result = (luckyNumber * userAmount);
-//
-//     if (luckyNumber == 0) {
-//         calculateTotal(0, userAmount);
-//         console.log('Your new total is $' + discountPrice);
-//     } else if (luckyNumber == 1) {
-//         calculateTotal(.1, userAmount);
-//         console.log('Your new total is $' + discountPrice)
-//     } else if (luckyNumber == 2) {
-//         calculateTotal(.25, userAmount);
-//         console.log('Your new total is $' + discountPrice)
-//     } else if (luckyNumber == 3) {
-//         calculateTotal(.35, userAmount)
-//         console.log('Your new total is $' + discountPrice)
-//     } else if (luckyNumber == 4) {
-//         calculateTotal(.5, userAmount)
-//         console.log('Your new total is $' + discountPrice)
-//     } else if (luckyNumber == 5) {
-//         return 'Congratulations, everything is Free!';
-//     }
-// }
-//
-// console.log(discountPrice);
-
-
 
 /**
  * TODO:
