@@ -24,20 +24,20 @@
 
 // let colorInput = prompt(`What's your favorite color?`);
 // console.log(analyzeColor(colorInput));
-//
+
 // function analyzeColor(color){
-//
-//     if(color == "blue"){
-//         return `Blue is the color of the sky`;
-//     } else if(color == "red"){
-//         return `Red is the color of blood`;
-//     } else if(color == "green"){
-//         return `Green is the color of grass`;
-//     } else if(color == "yellow") {
-//         return `Yellow is the color of the sun`;
-//     } else{
-//         return `I don't know anything about ${color}`;
-//     }
+    //
+    // if(color == "blue"){
+    //     return `Blue is the color of the sky`;
+    // } else if(color == "red"){
+    //     return `Red is the color of blood`;
+    // } else if(color == "green"){
+    //     return `Green is the color of grass`;
+    // } else if(color == "yellow") {
+    //     return `Yellow is the color of the sun`;
+    // } else {
+    //     return `I don't know anything about ${color}`;
+    // }
 // }
 
 // Don't change the next two lines!
@@ -52,7 +52,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+//
+// console.log(`The random color is ${randomColor}`);
 // console.log(analyzeColor(randomColor));
 
 /**
@@ -62,23 +63,27 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 // let colorInput = prompt(`What's your favorite color?`);
 // console.log(analyzeColor(colorInput));
-
-// switch(colorInput) {
-//     case "blue":
-//         alert`Blue is the color of the sky`;
-//         break;
-//     case "red":
-//         alert`Red is the color of blood`;
-//         break;
-//     case "green":
-//         alert`Green is the color of grass`;
-//         break;
-//     case "yellow":
-//         alert`Yellow is the color of the sun`;
-//         break;
-//     default:
-//         alert(`I don't know anything about ${colorInput}`);
+//
+// function analyzeColor(colorInput) {
+//
+//     switch (colorInput) {
+//         case "blue":
+//             alert`Blue is the color of the sky`;
+//             break;
+//         case "red":
+//             alert`Red is the color of blood`;
+//             break;
+//         case "green":
+//             alert`Green is the color of grass`;
+//             break;
+//         case "yellow":
+//             alert`Yellow is the color of the sun`;
+//             break;
+//         default:
+//             alert(`I don't know anything about ${colorInput}`);
 //     }
+//
+// }
 
 
 /**
@@ -110,42 +115,68 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-let luckyNumber = Math.floor((Math.random() * 5) + 0);
-console.log(luckyNumber);
+let luckyNumber = Math.floor((Math.random() * 6) + 0);
+console.log(`The random discount number is ${luckyNumber}`);
+let userAmount = prompt(`What is the total amount of your bill?`);
+console.log(`The user's bill is ${userAmount}`);
+console.log(`Your new discounted total is ${calculateTotal(luckyNumber, userAmount)}.`);
 
-let userAmount = prompt("How much is the total cost?");
+function calculateTotal(luckyNumber, userAmount) {
 
-
-function luckyNumberConverted(luckyNumber){
-    if (luckyNumber == 0);
-    luckyNumber = 0;
-
-}
-
-function calculateTotal(luckyNumber, userAmount){
-    let result = (luckyNumber * userAmount);
-
-    if (luckyNumber == 0) {
-        calculateTotal(0, userAmount);
-        console.log('Your new total is $' + discountPrice);
-    } else if (luckyNumber == 1) {
-        calculateTotal(.1, userAmount);
-        console.log('Your new total is $' + discountPrice)
-    } else if (luckyNumber == 2) {
-        calculateTotal(.25, userAmount);
-        console.log('Your new total is $' + discountPrice)
-    } else if (luckyNumber == 3) {
-        calculateTotal(.35, userAmount)
-        console.log('Your new total is $' + discountPrice)
-    } else if (luckyNumber == 4) {
-        calculateTotal(.5, userAmount)
-        console.log('Your new total is $' + discountPrice)
-    } else if (luckyNumber == 5) {
-        return 'Congratulations, everything is Free!';
+    if (luckyNumber === 0) {
+        return `Sorry no discount`;
+    } else if (luckyNumber === 1) {
+        return "$" + (.9 * userAmount);
+    } else if (luckyNumber === 2) {
+        return "$" + (.75 * userAmount);
+    } else if (luckyNumber === 3) {
+        return "$" + (.65 * userAmount);
+    } else if (luckyNumber === 4) {
+        return "$" + (.5 * userAmount);
+    } else {
+        return `Congratulations, you get everything for FREE!!!`
     }
 }
 
-console.log(discountPrice);
+
+
+
+// let luckyNumber = Math.floor((Math.random() * 5) + 0);
+// console.log(luckyNumber);
+//
+// let userAmount = prompt("How much is the total cost?");
+//
+//
+// function luckyNumberConverted(luckyNumber){
+//     if (luckyNumber == 0);
+//     luckyNumber = 0;
+
+
+
+// function calculateTotal(luckyNumber, userAmount){
+//     let result = (luckyNumber * userAmount);
+//
+//     if (luckyNumber == 0) {
+//         calculateTotal(0, userAmount);
+//         console.log('Your new total is $' + discountPrice);
+//     } else if (luckyNumber == 1) {
+//         calculateTotal(.1, userAmount);
+//         console.log('Your new total is $' + discountPrice)
+//     } else if (luckyNumber == 2) {
+//         calculateTotal(.25, userAmount);
+//         console.log('Your new total is $' + discountPrice)
+//     } else if (luckyNumber == 3) {
+//         calculateTotal(.35, userAmount)
+//         console.log('Your new total is $' + discountPrice)
+//     } else if (luckyNumber == 4) {
+//         calculateTotal(.5, userAmount)
+//         console.log('Your new total is $' + discountPrice)
+//     } else if (luckyNumber == 5) {
+//         return 'Congratulations, everything is Free!';
+//     }
+// }
+//
+// console.log(discountPrice);
 
 
 
