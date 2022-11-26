@@ -60,25 +60,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-let colorInput = prompt(`What's your favorite color?`);
+// let colorInput = prompt(`What's your favorite color?`);
 // console.log(analyzeColor(colorInput));
 
-switch(colorInput) {
-    case "blue":
-        alert`Blue is the color of the sky`;
-        break;
-    case "red":
-        alert`Red is the color of blood`;
-        break;
-    case "green":
-        alert`Green is the color of grass`;
-        break;
-    case "yellow":
-        alert`Yellow is the color of the sun`;
-        break;
-    default:
-        alert(`I don't know anything about ${colorInput}`);
-    }
+// switch(colorInput) {
+//     case "blue":
+//         alert`Blue is the color of the sky`;
+//         break;
+//     case "red":
+//         alert`Red is the color of blood`;
+//         break;
+//     case "green":
+//         alert`Green is the color of grass`;
+//         break;
+//     case "yellow":
+//         alert`Yellow is the color of the sun`;
+//         break;
+//     default:
+//         alert(`I don't know anything about ${colorInput}`);
+//     }
 
 
 /**
@@ -109,6 +109,45 @@ switch(colorInput) {
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+let luckyNumber = Math.floor((Math.random() * 5) + 0);
+console.log(luckyNumber);
+
+let userAmount = prompt("How much is the total cost?");
+
+
+function luckyNumberConverted(luckyNumber){
+    if (luckyNumber == 0);
+    luckyNumber = 0;
+
+}
+
+function calculateTotal(luckyNumber, userAmount){
+    let result = (luckyNumber * userAmount);
+
+    if (luckyNumber == 0) {
+        calculateTotal(0, userAmount);
+        console.log('Your new total is $' + discountPrice);
+    } else if (luckyNumber == 1) {
+        calculateTotal(.1, userAmount);
+        console.log('Your new total is $' + discountPrice)
+    } else if (luckyNumber == 2) {
+        calculateTotal(.25, userAmount);
+        console.log('Your new total is $' + discountPrice)
+    } else if (luckyNumber == 3) {
+        calculateTotal(.35, userAmount)
+        console.log('Your new total is $' + discountPrice)
+    } else if (luckyNumber == 4) {
+        calculateTotal(.5, userAmount)
+        console.log('Your new total is $' + discountPrice)
+    } else if (luckyNumber == 5) {
+        return 'Congratulations, everything is Free!';
+    }
+}
+
+console.log(discountPrice);
+
+
 
 /**
  * TODO:
