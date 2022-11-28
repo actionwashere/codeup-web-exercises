@@ -169,17 +169,20 @@ function calculateTotal(luckyNumber, userAmount) {
  * HINT: The way we prompt for a value could be improved
  */
 
-confirm(`Would you like to enter a number?`) {
-    if (true)
-        let userNumber = prompt(`What number would you like to enter?`) {
-        if (userNumber % 2 == 0 ) {
-            alert(`Your number is even.`)
-            alert(`Your number plus 100 is ${userNumber + 100}.`)
-            alert
-        } else {
-            alert(`Your number is odd.`)
-        }
+let result = confirm("Would you like to enter a number?");
+if (result == true) {
+    let userNumber = prompt("What number would you like to enter?");
+    if (userNumber % 2 == 0) {
+        alert("Your number is even.");
+    } else {
+        alert("Your number is odd.");
     }
+    alert("Your number plus 100 equals " + (parseFloat(userNumber) + 100));
+    if (userNumber > 0) {
+        alert("Your number is positive.");
+    } else {
+        alert("Your number is negative.");
+    }
+} else {
+    console.log("User didn't want to enter a number");
 }
-
-function isEven(userNumber);
