@@ -54,6 +54,25 @@ console.log(sayHowdy());
 // write a function, abbrevToDay, that takes in a three-character abbreviation for the day of the week and returns the complete day of the week
 // Example: abbrevToDay('mon') returns 'Monday'
 
+// function abbrevToDay(day){
+//     if (day === "mon"){
+//         return "Monday";
+//     } else if (day === "tue"){
+//         return "Tuesday";
+//     } else if (day === "wed"){
+//         return "Wednesday";
+//     } else if (day === "thu"){
+//         return "Thursday";
+//     } else if (day === "fri"){
+//         return "Friday";
+//     } else if (day === "sat"){
+//         return "Saturday";
+//     } else if (day === "sun"){
+//         return "Sunday";
+//     } else {
+//         return `Not a valid input.`;
+//     }
+// }
 
 function abbrevToDay(day) {
     let newDay;
