@@ -46,4 +46,10 @@ function isEven(num) {
 //     }
 // }
 
-
+for(let i = 0; i < 10; i++) {
+     let numArray = [];
+     for(let j = 0; j < i; j++) {
+         numArray.push(i);
+     }
+    console.log(numArray.join(""));
+}
