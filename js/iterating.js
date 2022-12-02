@@ -50,6 +50,9 @@
      * Refactor your above code to use a `forEach` loop
      */
 
+    console.log(`comment: Running foreach loop.`);
+    console.log("");
+
     names.forEach(function(name){
         console.log(name);
     });
@@ -88,17 +91,65 @@
         return array[i];
     }
 })();
-console.log("");
+// console.log("");
+//
+//
+//
+//
+// console.log(`Mini exercises.`);
+//
+// let classMates = ['Action', 'Fernando', 'Jona'];
+// console.log(classMates);
+// console.log("");
+// console.log(classMates[0]);
+// console.log(classMates[1]);
+// console.log(classMates[2]);
+// console.log("");
+// classMates[1] = "Justin";
+// console.log(classMates);
+//
+// console.log('');
+//
+// console.log("");
+//
+// const numbers = [3, 2 ,4];
+//
+//
+// let total = true;
+// numbers.forEach(function(number){
+//     total += number;
+// });
+//
+// console.log(total);
+//
+//
+// console.log('');
+// console.log(`mini exercise 2`);
+// console.log('');
+//
+// for(let i = 0; i < classMates.length; i += 1 ) {
+//     console.log(classMates[i]);
+// }
+//
+// console.log('');
+//
+// classMates.forEach(function (name){
+//     console.log(name);
+// })
+//
+//
+// console.log('');
 
+// !! Write a function, logNums, that takes in an array and logs each number in the array !!
+// !! Write a function, returnLongString, that takes in an array of strings and returns all strings concatenated together !!
+// !! Write a function, returnArrSum, that takes in an array of values and returns the sum of all number elements !!
 
-console.log(`Mini exercises.`);
-
-let classMates = ['Action', 'Fernando', 'Jona'];
-console.log(classMates);
-console.log("");
-console.log(classMates[0]);
-console.log(classMates[1]);
-console.log(classMates[2]);
-console.log("");
-classMates[1] = "Justin";
-console.log(classMates[1]);
+// let num = [1, 2, 3, 4, 5];
+//
+// logNums(num)
+//
+// function logNums(array){
+//     for(let i = 0; i < array.length; i += 1){
+//         console.log(array[i])
+//     }
+// }
