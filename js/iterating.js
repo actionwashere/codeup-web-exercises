@@ -144,12 +144,32 @@
 // !! Write a function, returnLongString, that takes in an array of strings and returns all strings concatenated together !!
 // !! Write a function, returnArrSum, that takes in an array of values and returns the sum of all number elements !!
 
-// let num = [1, 2, 3, 4, 5];
-//
-// logNums(num)
-//
-// function logNums(array){
-//     for(let i = 0; i < array.length; i += 1){
-//         console.log(array[i])
-//     }
-// }
+let num = [1, 2, 3, 4, 5];
+
+logNums(num);
+
+function logNums(array){
+    for(let i = 0; i < array.length; i += 1){
+        console.log(array[i]);
+    }
+}
+
+let StrArr = ["Follow", "the", "yellow", "brick", "road"];
+console.log(StrArr);
+
+console.log(returnLongString(StrArr));
+
+function returnLongString(arr) {
+    return arr.join(" ");
+
+}
+
+function returnArrSum(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i += 1){
+        sum += arr[i];
+    }
+    return sum;
+}
+
+console.log(returnArrSum(num));
