@@ -84,7 +84,21 @@
     }
 
     function last(array) {
-        let i = array.length;
+        let i = array.length - 1;
         return array[i];
     }
 })();
+console.log("");
+
+
+console.log(`Mini exercises.`);
+
+let classMates = ['Action', 'Fernando', 'Jona'];
+console.log(classMates);
+console.log("");
+console.log(classMates[0]);
+console.log(classMates[1]);
+console.log(classMates[2]);
+console.log("");
+classMates[1] = "Justin";
+console.log(classMates[1]);
