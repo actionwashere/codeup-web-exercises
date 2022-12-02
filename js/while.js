@@ -44,22 +44,22 @@ console.log(`The vendor has ${allCones} cones left to sell`);
 //     console.log(`i have ${allCones} cones left`);
 // } while (allCones >= 0);
 
-var allCones = Math.floor(Math.random() * 50) + 50;
-console.log("all cones are " + allCones);
+let allCones = Math.floor(Math.random() * 50) + 50;
+console.log(`The ice cream vendor has ${allCones} left to sale.`);
 
-var i = 0;
+let i = 0;
 do {
-    var soldCones = Math.floor(Math.random() * (5 - 1)) + 1;
+    let soldCones = Math.floor(Math.random() * (5 - 1)) + 1;
     if(allCones === 0){
-        console.log("Yay! sold them all");
+        console.log(`Yay! sold them all`);
         break;
     }else if(allCones >= soldCones){
-        console.log("Just sold " + soldCones + " cones.");
+        console.log(`Just sold ${soldCones} cones.`);
         allCones = allCones - soldCones;
-        console.log("remaining cones " + allCones);
+        console.log(`There are ${allCones} left.`);
         continue;
     }else if(allCones < soldCones){
-        console.log("cannot sell you! I have " + allCones + " because you want " + soldCones);
+        console.log(`I can't sell you ${soldCones} because I only have ${allCones} left.`);
     }
     i++
 } while (i < 100);
