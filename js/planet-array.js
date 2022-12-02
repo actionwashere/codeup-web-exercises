@@ -47,3 +47,22 @@
     planets.sort();
     console.log(planets);
 })();
+
+
+
+// ======================= ARRAY BONUSES
+// 1. Create an array of 10 foods. Write using a for loop, write logic that will log only the foods that start with a vowel. Write another solution using a forEach loop.
+// 2. Write a function, addEvenNums, that takes in an array of numbers and adds up only the even numbers in the array and returns the sum of the even numbers. Assume any array inputs will only contain valid number elements and be non-empty.
+// 3. Write a function, checkIfNumInArray, that takes in an array of numbers and a number and returns the string
+// ‘input num in input array’ if the second argument is an element in the first argument array
+// otherwise, the function should return the string ‘input num NOT in input array’ (edited)
+
+let foods = ['steak', 'lobster', 'pie', 'eggs', 'apple', 'pineapple', 'tacos', 'hamburger', 'eggplant', 'onions'];
+
+for(let i = 0; i < foods.length; i += 1){
+    let firstChar = foods[i][0];
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    if (vowels.includes(firstChar)) {
+        console.log(foods[i]);
+    }
+}
