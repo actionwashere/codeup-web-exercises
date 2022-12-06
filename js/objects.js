@@ -30,10 +30,17 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    function sayHello(name){
-        return `Hello from ${name}!`;
+
+    person.sayHello = function(){
+        return `Hello from ${person.firstName} ${person.lastName}!`;
     }
 
+
+    // function sayHello(name){
+    //     return `Hello from ${name}!`;
+    // }
+
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -49,11 +56,19 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper){
+        if(shopper.amount > 200){
+            console.log(`${shopper.name} spent $${shopper.amount}, they get the discount of 12%, so they pay $${(shopper.amount * .88).toFixed(2)}.`);
+        } else {
+            console.log(`${shopper.name} spent $${shopper.amount}, they didn't spent enough to receive a discount.`);
+        }
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -67,6 +82,61 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    const books = [
+        {
+            title: `North and South: Trilogy`,
+            author: {
+                firstName: `John`,
+                lastName: `Jakes`
+            },
+            amountOfBooks: 3
+        },
+        {
+            title: `Harry Potter Series`,
+            author: {
+                firstName: `J.K.`,
+                lastName: `Rowling`
+            },
+            amountOfBooks: 7
+        },
+        {
+            title: `California Gold`,
+            author: {
+                firstName: `John`,
+                lastName: `Jakes`
+            },
+            amountOfBooks: 1
+        },
+        {
+            title: `Sackett Family Chronicles`,
+            author: {
+                firstName: `Louis`,
+                lastName: `L'Amour`
+            },
+            amountOfBooks: 19
+        },
+        {
+            title: `Isaac Bell Adventures`,
+            author: {
+                firstName: `Clive`,
+                lastName: `Custer`
+            },
+            amountOfBooks: 13
+        },
+        {
+            title: `Warriors`,
+            author: {
+                firstName: `Erin`,
+                lastName: `Hunter`
+            },
+            amountOfBooks: 14
+        }
+
+    ]
+
+
+
 
     /**
      * TODO:
@@ -93,6 +163,16 @@
      *      ...
      */
 
+    let bookNum = 0;
+    books.forEach(function (book){
+        console.log(`Book # ${bookNum += 1}
+        Title: ${book.title}
+        Author: ${book.author.firstName} ${book.author.lastName}
+        Amount of books in series: ${book.amountOfBooks}`)
+    });
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -103,5 +183,34 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author, amount){
+        return {
+            title: title,
+            author: author,
+            amountOfBooks: amount
+        };
+    }
+
+    console.log(createBook(`Narnia Series`, `C.S. Lewis`, 8));
+
+    let booksNew = [
+        createBook(`North and South: Trilogy`, `John Jakes`, 3),
+        createBook(`Harry Potter Series`, `J.K. Rowling`, 7),
+        createBook(`Sackett Family Chronicles`, `Louis L'Amour`, 19),
+    ];
+
+    console.log(booksNew);
+
+
+    function showBookInfo(book){
+        return `Title: ${book.title}
+        Author: ${book.author.firstName} ${book.author.lastName}
+        Amount of books in series: ${book.amountOfBooks}`;
+    }
+
+    console.log("");
+
+    console.log(showBookInfo(books[2]));
 
 })();
