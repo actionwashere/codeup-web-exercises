@@ -185,12 +185,19 @@
      */
 
     function createBook(title, author, amount){
-        return {
+        let authorArr = author.split(" ");
+        let bookObject = {
             title: title,
-            author: author,
+            author: {
+                firstName: authorArr[0],
+                lastName: authorArr[1]
+            },
             amountOfBooks: amount
         };
+        return bookObject
     }
+
+
 
     console.log(createBook(`Narnia Series`, `C.S. Lewis`, 8));
 
