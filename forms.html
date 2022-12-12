@@ -8,15 +8,39 @@
   <div>
     <form method="POST" action="https://request-inspector.glitch.me/">
 
-      <label for="username">Username</label>
-      <input id="username" name="username" type="text">
+      <label for="emailAddress">Email</label>
+      <input id="emailAddress" name="emailAddress" type="text" placeholder="enter email address">
       <br>
-
       <label for="password">Password</label>
-      <input id="password" name="password" type="password">
+      <input id="password" name="password" type="password" placeholder="enter password">
       <br>
-
-      <input type="submit">
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" placeholder="tell us something about yourself"></textarea>
+      <br><br>
+      <label><strong>How did you hear about us?</strong></label>
+      <br>
+      <label for="billboard">Billboard</label>
+      <input id="billboard" type="radio" name="hearAboutUs" value="Billboard">
+      <br>
+      <label for="radio">Radio Advertisement</label>
+      <input id="radio" type="radio" name="hearAboutUs" value="Radio advertisement">
+      <br>
+      <label for="internet">Internet Advertisement</label>
+      <input id="internet" type="radio" name="hearAboutUs" value="Internet advertisement">
+      <br>
+      <label for="other">Other</label>
+      <input id="other" type="radio" name="hearAboutUs" value="Other">
+      <br><br>
+      <label for="whatBrowser">What web browser are you using?</label>
+      <br>
+      <select id="whatBrowser" name="whatBrowser">
+        <option value="empty"></option>
+        <option value="google-chrome">Google Chrome</option>
+        <option value="mozilla-firefox">Mozilla Firefox</option>
+        <option value="internet-explorer">Internet Explorer</option>
+      </select>
+      <br><br>
+      <button type="submit">Submit</button>
     </form>
   </div>
 </body>
