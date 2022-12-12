@@ -1,4 +1,40 @@
+
+body {
+    background-image: url("/img/art-cream-background.jpg");
+}
+
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+h2 {
+    color: orangered;
+    text-decoration: underline;
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:black;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:green;
+}
+
+ol {
+    list-style: lower-roman;
+}
+ul {
+    list-style: square;
 }
