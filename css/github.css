@@ -3,7 +3,6 @@
     padding:0;
 }
 
-
 .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -16,9 +15,36 @@
     align-items: center;
 }
 
+.container.header-container {
+    background-color: black;
+}
 
 .row {
     display: flex;
     width: 100%;
     max-width: 1000px;
+    padding: 10px;
+}
+
+.header-container .row {
+    column-gap: 30px;
+}
+
+.header-container .column {
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.column.col-shrink {
+    flex-grow: unset;
+    flex-shrink: 1;
+}
+
+.header-container ul{
+
 }
