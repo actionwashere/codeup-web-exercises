@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container.box1{
+    background-color: #666666;
+    padding: 10px;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    display: flex;
+    background-color: #666666;
+}
+a{
+    padding: 10px;
+}
