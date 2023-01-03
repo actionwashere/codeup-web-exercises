@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<!--     nav bar      -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Pizza World</a>
@@ -46,6 +48,8 @@
     </div>
 </nav>
 
+<!--     jumbotron     -->
+
 
 <div class="container">
     <div class="jumbotron d-flex justify-content-center align-items-center d-none d-md-flex">
@@ -54,23 +58,89 @@
         </div>
     </div>
 
-</div>
 
-<div class="container">
-    <h2>Build Your own Pizza!</h2>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span class="badge bg-secondary">1</span> Size and Crust</a>
+    <!--      build your own pizza-->
+
+
+    <h2>Build Your Own Pizza!</h2>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true"><span
+                    class="badge rounded-circle  bg-secondary">1</span> Size and Crust
+            </button>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge bg-secondary">2</span> Cheese and Sauce</a>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false"><span
+                    class="badge rounded-circle  bg-secondary">2</span> Cheese and Sauce
+            </button>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge bg-secondary">3</span> Toppings</a>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+                    role="tab" aria-controls="contact" aria-selected="false"><span
+                    class="badge rounded-circle  bg-secondary">3</span> Toppings
+            </button>
         </li>
     </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="card">
+                <div class="card-body card-header">
+                    Choose Size and Crust
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h6>Hand Tossed</h6>
+                    <h6>Garlic seasoned crust with a rich, buttery taste.</h6>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="radio" value=""
+                                   aria-label="Radio button for following text input">
+                        </div>
+                        <input type="text" class="form-control" placeholder='Small (10")'
+                               aria-label="Text input with radio button">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="radio" value=""
+                                   aria-label="Radio button for following text input">
+                        </div>
+                        <input type="text" class="form-control" placeholder='Medium (12")'
+                               aria-label="Text input with radio button">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h6 class="hand-toss">Crispy Thin</h6>
+                    <h6 class="crust-dis">Thin enough for optimum crispy to crunchy ratio.</h6>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="radio" value=""
+                                   aria-label="Radio button for following text input">
+                        </div>
+                        <input type="text" class="form-control" placeholder='Medium (12")'
+                               aria-label="Text input with radio button">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="radio" value=""
+                                   aria-label="Radio button for following text input">
+                        </div>
+                        <input type="text" class="form-control" placeholder='Large (14")'
+                               aria-label="Text input with radio button">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
 </div>
 
+<!--     bootstrap script     -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
