@@ -21,3 +21,8 @@ hr{
 .main-header{
     font-size: 4em;
 }
+.hr-bar{
+    height: 3px;
+    width: 100%;
+    background-color: #95AB76;
+}
