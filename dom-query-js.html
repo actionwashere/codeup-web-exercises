@@ -61,7 +61,12 @@
         everyOtherLi();
 
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems[0].style.color = "#0000FF";
+        for(let i = 0; i < listItems.length; i += 1){
+            if(listItems[i].getAttribute("data-dbid") === "1"){
+                listItems[i].style.color = "#0000FF";
+            }
+        }
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraphs = document.getElementsByClassName("sub-paragraph");
