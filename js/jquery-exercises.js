@@ -1,7 +1,6 @@
 "use strict"
 
-$(function() {
 
-    // INSERT JAVASCRIPT CODE SAMPLE HERE
+let contents = $('#welcome-message').html();
+alert(contents);
 
-});
