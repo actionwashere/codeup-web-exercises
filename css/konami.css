@@ -1,0 +1,11 @@
+.con-main {
+    height: 500px;
+    width: 100%;
+}
+
+.lastKey {
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    padding: 10px;
+}
