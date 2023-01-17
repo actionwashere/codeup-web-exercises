@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-3.6.3.js"></script>
+<script>
+    "use strict";
+
+    // ***** variables *****
+    let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 65, 65]
+    let userCode = [];
+    let btnPress;
+
+    // ***** functions *****
+    function test(){
+        userCode.forEach(function(num){
+            if(userCode[num] === konamiCode[num] && userCode.length === konamiCode.length){
+                alert(`You've added 30 lives!`)
+                userCode = [];
+            } else {
+                userCode = [];
+            }
+        })
+    }
+
+    // ***** events *****
+    $(document).keyup(function(event){
+        btnPress = event.keyCode;
+        if(btnPress === 13){
+            console.log(`test`);
+            test();
+        } else {
+        userCode.push(btnPress);
+        console.log(btnPress);
+        console.log(userCode);
+        }
+    });
+
+</script>
+</body>
+</html>
