@@ -47,15 +47,17 @@
         userCode.forEach(function (num) {
             if (userCode[num] === konamiCode[num] && userCode.length === konamiCode.length) {
                 alert(`You've added 30 lives!`)
+                $('.lastKey').html(``);
                 userCode = [];
             } else {
+                $('.lastKey').html(``);
                 userCode = [];
             }
         })
     }
 
     // ***** events *****
-    $(document).keyup(function (event) {
+    $(document).keydown(function (event) {
         btnPress = event.keyCode;
         if (btnPress === 13) {
             console.log(`test`);
