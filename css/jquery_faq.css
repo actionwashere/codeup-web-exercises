@@ -1,3 +1,5 @@
+
+/****** elements ******/
 dt {
     font-size: 20px;
     color: red;
@@ -10,6 +12,62 @@ dd {
     cursor: pointer;
 }
 
+h3 {
+    font-weight: bold;
+    color: grey;
+    text-shadow: 2px 2px white;
+    cursor: pointer;
+}
+
+li {
+    cursor: pointer;
+}
+
+/*section {*/
+/*    border: 2px solid black;*/
+/*}*/
+
+/****** classes ******/
+.page-wrapper {
+    background-color: #d9f3ff;
+}
+
 .highlight {
     background-color: yellow;
+}
+
+.header {
+    font-weight: bolder;
+    color: white;
+    text-shadow: 3px 3px black;
+    height: 25em;
+    width: 100%;
+    background-image: url("../img/photo-1545394734-b4140a8cfa9c.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.yellowBg {
+    background-color: yellow;
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+.makeBlue {
+    color: blue;
+}
+
+/*.picFrame {*/
+/*    border: 2px solid black;*/
+/*}*/
+
+/****** ids ******/
+#btnYellow {
+    background-color: grey;
+    color: yellow;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+    border-radius: 5px;
 }
