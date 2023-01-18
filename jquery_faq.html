@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <title>jquery-faq</title>
 
-    <!--***** bootstrap link *****-->
+    <!--***** bootstrap-link *****-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <!--    ***** css link *****-->
+    <!--    ***** css-link *****-->
     <link rel="stylesheet" href="css/jquery_faq.css">
 
 </head>
 <body>
 
-<!--**** page wrapper *****-->
+<!--**** page-wrapper *****-->
 <div class="page-wrapper">
 
-    <!--    ***** header *****-->
+    <!--***** header-container *****-->
     <header class="container-fluid header d-flex justify-content-center align-items-center">
         <div class="row">
+
+            <!--***** header-text *****-->
             <div class="col mt-3 d-flex justify-content-center align-items-center">
                 <h1>National Parks and FAQ's</h1>
             </div>
         </div>
     </header>
+    <!--***** end-header-container *****-->
 
     <!--***** container-one ******-->
     <div class="container d-flex justify-content-center">
         <div class="row d-flex justify-content-center">
 
-            <!--***** unordered list for National Parks *****-->
+            <!--***** unordered-lists-for-National-Parks *****-->
             <div class="col-12 d-flex align-items-center mt-5 mb-3 ">
                 <section class="col-4">
                     <h3 class="d-flex justify-content-center mt-2">National Parks</h3>
@@ -63,15 +66,19 @@
                     </ul>
                 </section>
             </div>
-            <div class="col-4 d-flex justify-content-center mt-3">
+
+            <!--***** make-it-yellow-btn *****-->
+            <div class="col-4 d-flex justify-content-center mt-3 mb-5">
                 <button id="btnYellow" class="col-4" type="button">Make it Yellow</button>
             </div>
 
-            <!--***** definition list for Glacier National Park *****-->
-            <div class="col-12 mt-5 d-flex">
+            <!--***** Glacier-National-Park-FAQ-header*****-->
+            <div class="col-12 mt-5 d-flex justify-content-center">
                 <h3 id="glacierHeader"><u>Glacier National Park FAQ</u></h3>
             </div>
-            <div class="col-12 mt-5">
+
+            <!--***** FAQ *****-->
+            <div class="col-12 mt-5 d-flex">
                 <dl>
                     <dt>Q: Where is Glacier National Park located?</dt>
                     <dd class="invisible">A: Glacier National Park is located in northwestern Montana on the
@@ -130,23 +137,37 @@
             </div>
         </div>
     </div>
+    <!--***** end-container-one ******-->
 
-<!--    ***** container-two *****-->
+    <!--***** container-two *****-->
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <section id="picture-one" class="col-4 picFrame">
-                    <img alt="portrait of a person" src="img/bootstrap-logo.jpeg">
+
+            <!--***** three-logos *****-->
+            <div class="col-12 d-flex flex-row">
+                <section id="picture-one" class="col-4 pb-5">
+                    <img class="picFrame" alt="portrait of a person" src="img/bootstrap-logo.jpeg">
+                    <div class="col-12 btn d-flex justify-content-center align-items-center">
+                        <button id="btn-pic-one" class="switchBtn">SWITCH</button>
+                    </div>
                 </section>
-                <section id="picture-two" class="col-4 picFrame">
-                    <img alt="portrait of a person" src="img/javascript-logo.png">
+                <section id="picture-two" class="col-4 pb-5">
+                    <img class="picFrame" alt="portrait of a person" src="img/javascript-logo.png">
+                    <div class="col-12 btn d-flex justify-content-center align-items-center">
+                        <button id="btn-pic-two" class="switchBtn">SWITCH</button>
+                    </div>
                 </section>
-                <section id="picture-three" class="col-4 picFrame">
-                    <img alt="portrait of a person" src="img/jquery-logo.png">
+                <section id="picture-three" class="col-4 pb-5">
+                    <img class="picFrame" alt="portrait of a person" src="img/jquery-logo.png">
+                    <div class="col-12 btn d-flex justify-content-center align-items-center">
+                        <button id="btn-pic-three" class="switchBtn">SWITCH</button>
+                    </div>
                 </section>
             </div>
+
         </div>
     </div>
+    <!--***** end-container-two *****-->
 
 </div>
 
