@@ -3,7 +3,7 @@
     "title": "Hammer",
     "quantity": 25,
     "categories": [
-      "tool"
+      " tool"
     ],
     "price": 20
   },
@@ -11,8 +11,8 @@
     "title": "Drill",
     "quantity": 5,
     "categories": [
-      "tool",
-      "powered"
+      " tool",
+      " powered"
     ],
     "price": 100
   },
@@ -20,9 +20,9 @@
     "title": "Mower",
     "quantity": 5,
     "categories": [
-      "tool",
-      "gas",
-      "outdoor"
+      " tool",
+      " gas",
+      " outdoor"
     ],
     "price": 200
   },
@@ -30,7 +30,34 @@
     "title": "Screwdrivers",
     "quantity": 25,
     "categories": [
-      "tool"
+      " tool"
+    ],
+    "price": 10
+  },
+  {
+    "title": "Chainsaw",
+    "quantity": 12,
+    "categories": [
+      " tool",
+      " gas",
+      " outdoor"
+    ],
+    "price": 150
+  },
+  {
+    "title": "Wood Saw",
+    "quantity": 24,
+    "categories": [
+      " tool",
+      " outdoor"
+    ],
+    "price": 30
+  },
+  {
+    "title": "Wrench",
+    "quantity": 56,
+    "categories": [
+      " tool"
     ],
     "price": 10
   }
