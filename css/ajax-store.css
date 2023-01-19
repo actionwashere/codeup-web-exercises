@@ -1,14 +1,9 @@
-table {
+table, th, td {
     border: 2px solid black;
     border-radius: 5px;
     background-color: #d9f3ff;
     padding: 15px;
     margin: 15px;
-}
-
-thead {
-    border: 2px solid black;
-    border-radius: 5px;
 }
 
 header {
@@ -19,7 +14,7 @@ header {
     border: 3px solid black;
     border-radius: 10px;
 }
-tr>th {
+#tableHeaders {
     color: red;
 }
 
