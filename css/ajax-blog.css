@@ -1,0 +1,61 @@
+
+.page-wrapper {
+    min-height: 100vh;
+    background-image: url("../img/clouds.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header-container {
+    height: 120px;
+    background-color: #DEC7F3;
+    border-bottom: 8px solid white;
+    border-radius: 5px;
+}
+
+#page-header {
+    font-size: 50px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+    font-family: 'Pacifico', cursive;
+}
+
+#page-slogan {
+    color: red;
+    font-family: 'Indie Flower', cursive;
+}
+
+#xx {
+    color: black;
+}
+
+#post-row {
+    margin-top: 50px;
+    padding: 25px;
+    background-color: white;
+    /*height: 80vh;*/
+    width: auto;
+    border: 2px solid grey;
+    border-radius: 25px;
+}
+
+#title {
+    color: white;
+    text-shadow: 1px 1px black;
+    background-color: #DEC7F3;
+    padding: 15px 25px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+#content {
+    font-size: 25px;
+}
+
+#categories {
+}
+
+#date {
+
+}
