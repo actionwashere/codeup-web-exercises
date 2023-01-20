@@ -57,6 +57,10 @@
 <!--keys-->
 <script src="js/keys.js"></script>
 
+<!-- Mapbox Geocoder Util Methods -->
+<script src="./js/mapbox-geocoder-utils.js"></script>
+
+
 <!-- Mapbox JS -->
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 
@@ -69,13 +73,26 @@
         zoom: 10,
         center: [-98.4916, 29.4252]
     });
-    let marker = new mapboxgl.Marker()
-        .setLngLat([-98.4916, 29.4260])
-        .addTo(map);
-    let alamoPopup = new mapboxgl.Popup()
-        .setHTML("<p>Remember The Alamo!</p>")
+    // let marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.4916, 29.4260])
+    //     .addTo(map);
+    // let alamoPopup = new mapboxgl.Popup()
+    //     .setHTML("<p>Remember The Alamo!</p>")
+    //
+    // marker.setPopup(alamoPopup)
 
-    marker.setPopup(alamoPopup)
+    // the  geocode method from mapbox-geocoder-utils.js
+    // geocode("600 Navarro St #350, San Antonio, TX 78205", keys.mapbox).then(function(result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(20);
+    // });
+    // reverse geocode method from mapbox-geocoder-utils.js
+    reverseGeocode({lng: -98.4861, lat: 29.4260}, keys.mapbox).then(function(results) {
+        // logs the address for The Alamo
+        console.log(results);
+    });
+
 </script>
 </body>
 </html>
