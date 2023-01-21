@@ -45,14 +45,3 @@ $(document).ready(function(){
     });
 
 });
-
-
-
-
-
-
-
-// posts.title
-// posts.content
-// post.categories
-// post.date
