@@ -23,37 +23,13 @@ $(document).ready(function () {
                 map.setCenter(data);
                 map.setZoom(15);
 
+                marker.setPopup($restaurants)
             });
         });
-                // marker.setPopup($restaurants)
 
 
     });
 
-    // $restaurants.each(function(restaurant){
-    //
-    // });
-
-    //
-    // geocode("204 Alamo Plaza, San Antonio, TX 78205", keys.mapbox).then(function(location){
-    // let marker = new mapboxgl.Marker()
-    //     .setLngLat(location)
-    //     .addTo(map);
-    // let teddyRooPopup = new mapboxgl.Popup()
-    //     .setHTML("<p>Teddy Roosevelt shot a hole in this bar! - circa 19TEDDYFUCKINGROO</p>")
-    //     map.setCenter(location);
-    //     map.setZoom(15);
-    //
-    //
-    // marker.setPopup(teddyRooPopup)
-    //
-    // });
-
-    // teddyRoo.then(function(result) {
-    //     console.log(result);
-    //     map.setCenter(result);
-    //     map.setZoom(15);
-    // });
 
 
 });
