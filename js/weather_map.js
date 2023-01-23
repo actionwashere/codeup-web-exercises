@@ -68,9 +68,6 @@ $(document).ready(function () {
 
             });
 
-            let marker = new mapboxgl.Marker()
-                .setLngLat(data)
-                .addTo(map);
             map.flyTo({
                 center: data
 
