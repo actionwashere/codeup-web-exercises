@@ -74,18 +74,24 @@
 
     <!--search/map-->
     <div class="container" id="search-map-container">
-
-        <!--search bar-->
         <div class="row" id="search-row">
+
+            <!--search bar and current weather-->
             <div class="col-4" id="search">
+
+                <!--search bar-->
                 <form class="mb-3 pt-5 d-flex flex-column align-items-center" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Enter city here..." aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Enter city here..." id="search-bar" aria-label="Search">
                     <button class="btn col-4" id="search-btn" type="submit">Search</button>
                 </form>
-                <div class="col" id="current-weather">
+
+                <!--current weather card-->
+                <div class="col d-flex justify-content-center align-items-center opacity-80" id="current-weather">
                     <!--**** current weather card appears here *****-->
                 </div>
             </div>
+
+            <!-- map-->
             <div class="col-8" id="map">
                 <!--***** mapbox appears here *****-->
             </div>
@@ -93,15 +99,9 @@
     </div>
 
     <!--forecast-->
-    <div class="container" id="forecast-container">
-        <div class="row">
-            <div class="col d-flex flex-row">
-                <card class="day-card p-2"></card>
-                <card class="day-card p-2 ms-2"></card>
-                <card class="day-card p-2 ms-2"></card>
-                <card class="day-card p-2 ms-2"></card>
-                <card class="day-card p-2 ms-2"></card>
-            </div>
+    <div class="container d-flex mt-3" id="forecast-container">
+        <div class="row d-flex" id="5-day-forecast">
+
         </div>
     </div>
 

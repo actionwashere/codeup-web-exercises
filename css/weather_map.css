@@ -48,6 +48,13 @@
     border-radius: 15px;
 }
 
+.forecast-container {
+    border: 5px solid red;
+    border-radius: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+
 /*ID tags*/
 
 #map {
@@ -68,7 +75,7 @@
 }
 
 #search-map-container {
-    height: 50vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     border: 5px solid red;
@@ -105,13 +112,13 @@
     border: 2px solid white;
 }
 
-#current-weather {
-    height: 35vh;
-    width: 100%;
-    margin-bottom: 50px;
-    border: 5px solid red;
-    border-radius: 15px;
-}
+/*#current-weather {*/
+/*    height: 35vh;*/
+/*    width: 100%;*/
+/*    margin-bottom: 50px;*/
+/*    border: 5px solid red;*/
+/*    border-radius: 15px;*/
+/*}*/
 
 
 /*fonts*/
