@@ -23,7 +23,7 @@ $(document).ready(function () {
                 let html2 = '';
                 for (let i = 0; i < data.list.length; i += 8) {
                     console.log(data.list[i]);
-                    html2 += `<div class="card col-4" id="5-day-forecast">
+                    html2 += `<div class="card col-2">
                 <div class="card-header">
                     ${location}
                 </div>
