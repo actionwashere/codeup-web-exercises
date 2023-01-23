@@ -29,9 +29,9 @@ $(document).ready(function () {
                 </div>
                 <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png" alt="weather-icon"/>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"> Date: ${data.list[i].dt_txt}</li>
+                    <li class="list-group-item">${data.list[i].weather[0].description}</li>
+                    <li class="list-group-item">Date: ${data.list[i].dt_txt}</li>
                     <li class="list-group-item">Temp: ${data.list[i].main.temp}</li>
-                    <li class="list-group-item">Feels Like: ${data.list[i].main.feels_like}</li>
                     <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
                     <li class="list-group-item">Wind Speed: ${data.list[i].wind.speed}</li>
                 </ul>
@@ -46,9 +46,9 @@ $(document).ready(function () {
                 </div>
                 <img src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png" alt="weather-icon"/>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"> Date: ${data.list[0].dt_txt}</li>
+                    <li class="list-group-item">${data.list[0].weather[0].description}</li>
+                    <li class="list-group-item">Date: ${data.list[0].dt_txt}</li>
                     <li class="list-group-item">Temp: ${data.list[0].main.temp}</li>
-                    <li class="list-group-item">Feels Like: ${data.list[0].main.feels_like}</li>
                     <li class="list-group-item">Humidity: ${data.list[0].main.humidity}</li>
                     <li class="list-group-item">Wind Speed: ${data.list[0].wind.speed}</li>
                 </ul>
