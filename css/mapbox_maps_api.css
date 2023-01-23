@@ -1,15 +1,44 @@
+/*class tags*/
+
 .page-wrapper {
-    background-color: #444444;
+    background-color: lightslategray;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-#map {
-    flex-grow: 1;
+.globe-icon {
+    height: 35px;
+    width: auto;
 }
+
+/*id tags*/
 
 #header-container {
     color: white;
-    background-color: #444444;
+    background-color: lightslategray;
+    border-bottom: 2px solid black;
 }
+
+#aside-container {
+    height: 100%;
+    width: 30%;
+}
+
+#action {
+    color: red;
+    font-family: 'Anton', sans-serif;
+    /*font-family: 'Righteous', cursive;*/
+    text-shadow: 2px 2px black;
+    font-weight: bolder;
+}
+
+#header-text {
+    text-shadow: 2px 2px black;
+}
+
+
+/*fonts*/
+
+/*font-family: 'Anton', sans-serif;*/
+/*font-family: 'Righteous', cursive;*/
