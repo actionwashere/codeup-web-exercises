@@ -9,64 +9,32 @@ $(document).ready(function (){
         zoom: 10// starting zoom
     });
 
-    // $(`#find-btn`).on(`click`, function (){
-    //     let location = $(`#location`).val();
-    //     let latitude;
-    //     let longitude;
-    //     geocode(location, keys.mapbox).then(function (data) {
-    //         latitude = data[1];
-    //         longitude = data[0];
-    //         console.log(latitude, longitude);
-    //         $.get('https://api.openweathermap.org/data/2.5/forecast', {
-    //             lat: data[1],
-    //             lon: data[0],
-    //             appid: keys.openWeather,
-    //             units: 'imperial'
-    //         }).done(function (data) {
-    //             console.log(data);
-    //             $(`#current-city`).html(`Current City: ${data.city.name}`);
-    //
-    //
-    //             for (let i = 0; i < data.length; i += 8) {
-    //
-    //             let html = '';
-    //                 html += `<div class="card mt-5" id="forecast-card" style="width: 18rem;">
-    //                 <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png" class="card-img-top" alt="weather icon">
-    //                 <div class="card-body">
-    //                     <h6>${data.list[i].dt_txt}</h6>
-    //                     <h5 class="card-title" id="weather-description">${data.list[i].weather[0].description}</h5>
-    //                     <p class="card-text">${data.list[i].main.temp_min}&deg;F - ${data.list[i].main.temp_max}&deg;F</p>
-    //                 </div>
-    //                 <ul class="list-group list-group-flush">
-    //                     <li class="list-group-item">An item</li>
-    //                     <li class="list-group-item">A second item</li>
-    //                     <li class="list-group-item">A third item</li>
-    //                 </ul>
-    //             </div>`
-    //             }
-    //
-    //             $(`#current-weather`).html(html);
-    //         });
-    //     });
-    // });
-
+    let currentMarker = []; // Array that stores current markers on the map
 
     $(`#search-btn`).on(`click`, function (e) {
         e.preventDefault();
-        let location = $(`#search-bar`).val();
-        geocode(location, keys.mapbox).then(function (data) {
-            $.get('https://api.openweathermap.org/data/2.5/forecast', {
+
+        if (currentMarker !==null) { // checks to see if there are any markers on the map and removes them
+            for (let i = currentMarker.length - 1; i >= 0; i--) {
+                currentMarker[i].remove();
+            }
+        }
+
+        let location = $(`#search-bar`).val(); // location entered into search bar
+
+        geocode(location, keys.mapbox).then(function (data) { // changes location address into lon, lat using geocoder mapbox
+            $.get('https://api.openweathermap.org/data/2.5/forecast', { // calls openWeather API for weather location based on lon, lat from geocoder
                 lat: data[1],
                 lon: data[0],
                 appid: keys.openWeather,
                 units: 'imperial'
-            }).done(function (data) {
-                $(`#current-city`).html(`Current City: <strong class="kavoon-font">${data.city.name}</strong>`);
+            }).done(function (data) { // return of openWeather API data
+                $(`#current-city`).html(`Current City: <strong class="kavoon-font">${data.city.name}</strong>`); // updates current city
                 console.log(data.list);
-                let html = '';
-                for (let i = 0; i < data.list.length; i += 8) {
+                let html = ''; // empty string declared to add html
+                for (let i = 0; i < data.list.length; i += 8) { // loops through weather data and adds html to html string
                     console.log(data.list[i]);
-                    let newDate = new Date(data.list[i].dt * 1000);
+                    let newDate = new Date(data.list[i].dt * 1000); // converts dt into readable data and stores in variable newDate
                     html += `<div class="card d-flex col-2 ms-2 mt-5 item-border">
                 <div class="card-header d-flex justify-content-center">
                     ${newDate.toLocaleDateString(`en-us`, {weekday: 'short'})} - ${newDate.toLocaleDateString(`en-us`)}
@@ -76,39 +44,26 @@ $(document).ready(function (){
                     <li class="list-group-item"><strong>${data.list[i].weather[0].description}</strong></li>
                     <li class="list-group-item">${data.list[i].main.temp_min}&deg;F - ${data.list[i].main.temp_max}&deg;F</li>
                     <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
-                    <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
-                    <li class="list-group-item">Wind Speed: ${data.list[i].wind.speed}</li>
+                    <li class="list-group-item">Wind: ${data.list[i].wind.speed}</li>
+                    <li class="list-group-item">Pressure: ${data.list[i].main.pressure}</li>
                 </ul>
             </div>`
-                }
-
-                $(`#current-weather`).html(html);
-
-
-            }).fail(function (jqXhr, status, error) {
+                } // end of html writing
+                $(`#current-weather`).html(html); // writes html into page
+            }).fail(function (jqXhr, status, error) { // in case we messed up bad
                 console.log(jqXhr);
                 console.log(status);
                 console.log(error);
-
-
             });
 
-            map.flyTo({
+            map.flyTo({ // centers map on new location
                 center: data
-
             });
 
+            let newMarker = new mapboxgl.Marker().setLngLat(data).addTo(map); // adds new marker to map
+            currentMarker.push(newMarker); // pushes new marker to currentMarker array
+            console.log(currentMarker);
 
         });
-
     });
-
-
-
-
-
-
-
-
-
 });
