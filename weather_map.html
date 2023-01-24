@@ -30,8 +30,10 @@
     <!--nav bar-->
     <nav class="navbar sticky-top" id="nav-bar">
         <div class="container-fluid d-flex">
-            <a class="navbar-brand ms-5">Weather Action</a>
-            <p class="mt-2 me-3 nav-border" id="current-city">Current City: Search a city...</p>
+            <a class="navbar-brand ms-5" id="nav-text">Weather Action</a>
+            <div class="col item d-flex justify-content-end align-items-end" id="welcome-message">
+                <!--***** welcome message appears here *****-->
+            </div>
         </div>
     </nav>
 
@@ -50,11 +52,8 @@
                     <span class="input-group-text" id="inputGroup-sizing-lg">Place</span>
                     <input type="text" class="form-control" aria-label="Sizing example input"
                            aria-describedby="inputGroup-sizing-lg" id="search-bar" placeholder="">
-                    <button type="button" class="btn btn-primary" id="search-btn">Find</button>
+                    <button type="button" class="btn" id="search-btn">Find</button>
                 </div>
-            </div>
-            <div class="col item d-flex justify-content-end align-items-end" id="welcome-message">
-                <!--***** welcome message appears here *****-->
             </div>
         </div>
     </div>

@@ -1,17 +1,9 @@
 /*Class tags*/
-.navbar-brand {
-    font-size: 50px;
-    cursor: pointer;
-    color: white;
-    font-family: 'Righteous', cursive;
-    text-shadow: 2px 1px #a9a6a6;
-}
-
 .map-container{
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-    background-color: blue;
+    background-color: dodgerblue;
     min-height: 68vh;
 }
 .map-container > .row {
@@ -25,7 +17,7 @@
 }
 
 .map-border {
-    border: 5px solid blue;
+    border: 5px solid dodgerblue;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -38,10 +30,15 @@
     font-family: 'Kavoon', cursive;
 }
 
+.dodgerBlueColor {
+    color: dodgerblue;
+    text-shadow: 1px 1px #e3e0e0;
+}
+
 /*ID tags*/
 #nav-bar {
     font-size: 20px;
-    background-color: blue;
+    background-color: dodgerblue;
     color: white;
 }
 
@@ -54,9 +51,23 @@
 
 #welcome-message {
     color: #ececec;
-    text-shadow: 2px 1px blue;
+    text-shadow: 2px 1px dodgerblue;
     font-family: 'Righteous', cursive;
     font-size: 45px;
+    padding-right: 198px;
+}
+
+#search-btn {
+    color: white;
+    background-color: dodgerblue;
+}
+
+#nav-text {
+    cursor: pointer;
+    color: white;
+    font-size: 50px;
+    font-family: 'Kavoon', cursive;
+    padding-left: 150px;
 }
 
 /*fonts

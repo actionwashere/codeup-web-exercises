@@ -41,7 +41,7 @@ $(document).ready(function (){
                 </div>
                 <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png" alt="weather-icon" id="weather-icon"/>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>${data.list[i].weather[0].description}</strong></li>
+                    <li class="list-group-item"><strong class="dodgerBlueColor">${data.list[i].weather[0].description}</strong></li>
                     <li class="list-group-item">${data.list[i].main.temp_min}&deg;F - ${data.list[i].main.temp_max}&deg;F</li>
                     <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
                     <li class="list-group-item">Wind: ${data.list[i].wind.speed}</li>
@@ -49,9 +49,8 @@ $(document).ready(function (){
                 </ul>
             </div>`
                 } // end of html writing
-                // $(`#search-bar`).attr(`placeholder`, "");
                 $(`#current-weather`).html(html); // writes html into page
-                $(`#welcome-message`).html(`<span class="kavoon-font"> ${data.city.name}</span>`) // adds city name above map
+                $(`#welcome-message`).html(`<span class="kavoon-font"> ${data.city.name}</span>`) // adds city name to top of page
             }).fail(function (jqXhr, status, error) { // in case we messed up bad
                 console.log(jqXhr);
                 console.log(status);
