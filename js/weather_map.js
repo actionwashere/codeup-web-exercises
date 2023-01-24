@@ -61,46 +61,28 @@ $(document).ready(function (){
                 appid: keys.openWeather,
                 units: 'imperial'
             }).done(function (data) {
-                $(`#current-city`).html(`Current City: <strong>${data.city.name}</strong>`);
+                $(`#current-city`).html(`Current City: <strong class="kavoon-font">${data.city.name}</strong>`);
                 console.log(data.list);
-                let html1 = '';
-                let html2 = '';
+                let html = '';
                 for (let i = 0; i < data.list.length; i += 8) {
                     console.log(data.list[i]);
                     let newDate = new Date(data.list[i].dt * 1000);
-                    html2 += `<div class="card d-flex col-2 ms-2 mt-5">
+                    html += `<div class="card d-flex col-2 ms-2 mt-5 item-border">
                 <div class="card-header d-flex justify-content-center">
                     ${newDate.toLocaleDateString(`en-us`, {weekday: 'short'})} - ${newDate.toLocaleDateString(`en-us`)}
                 </div>
-                <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png" alt="weather-icon"/>
+                <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png" alt="weather-icon" id="weather-icon"/>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><strong>${data.list[i].weather[0].description}</strong></li>
-                    <li class="list-group-item">Temp: ${data.list[i].main.temp_min} - ${data.list[i].main.temp_max}</li>
+                    <li class="list-group-item">${data.list[i].main.temp_min}&deg;F - ${data.list[i].main.temp_max}&deg;F</li>
+                    <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
                     <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
                     <li class="list-group-item">Wind Speed: ${data.list[i].wind.speed}</li>
                 </ul>
             </div>`
                 }
 
-                console.log(location);
-
-                html1 += `<div class="card" id="current-weather">
-                <div class="card-header">
-                    ${location}
-                </div>
-                <img src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png" id="weather-icon" alt="weather-icon"/>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">${data.list[0].weather[0].description}</li>
-                    <li class="list-group-item">Date: ${data.list[0].dt_txt}</li>
-                    <li class="list-group-item">Temp: ${data.list[0].main.temp}</li>
-                    <li class="list-group-item">Humidity: ${data.list[0].main.humidity}</li>
-                    <li class="list-group-item">Wind Speed: ${data.list[0].wind.speed}</li>
-                </ul>
-            </div>`
-
-
-                // $(`#current-weather`).html(html1);
-                $(`#current-weather`).html(html2);
+                $(`#current-weather`).html(html);
 
 
             }).fail(function (jqXhr, status, error) {

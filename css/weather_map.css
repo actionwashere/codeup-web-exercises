@@ -1,13 +1,10 @@
-#nav-bar {
-    font-size: 20px;
-    background-color: blue;
-    color: white;
-}
-
+/*Class tags*/
 .navbar-brand {
     font-size: 50px;
     cursor: pointer;
     color: white;
+    font-family: 'Righteous', cursive;
+    text-shadow: 2px 1px #a9a6a6;
 }
 
 .map-container{
@@ -15,13 +12,51 @@
     flex-direction: column;
     margin-top: 25px;
     background-color: blue;
-    min-height: 70vh;
+    min-height: 68vh;
 }
 .map-container > .row {
     flex: 1 0 auto;
+    overflow: hidden;
+}
+
+.item-border {
+    border: 3px solid #a9a6a6;
+    border-radius: 10px;
+}
+
+.map-border {
+    border: 5px solid blue;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.nav-border {
+    border-bottom: 3px solid #a9a6a6;
+}
+
+.kavoon-font {
+    font-family: 'Kavoon', cursive;
+}
+
+/*ID tags*/
+#nav-bar {
+    font-size: 20px;
+    background-color: blue;
+    color: white;
 }
 
 #weather-icon {
+    display: flex;
+    align-self: center;
     height: 5em;
     width: 5em;
 }
+
+/*fonts
+
+font-family: 'Anton', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Kavoon', cursive;
+font-family: 'Righteous', cursive;
+
+*/
