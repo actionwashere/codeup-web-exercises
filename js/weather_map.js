@@ -49,7 +49,9 @@ $(document).ready(function (){
                 </ul>
             </div>`
                 } // end of html writing
+                // $(`#search-bar`).attr(`placeholder`, "");
                 $(`#current-weather`).html(html); // writes html into page
+                $(`#welcome-message`).html(`<span class="kavoon-font"> ${data.city.name}</span>`) // adds city name above map
             }).fail(function (jqXhr, status, error) { // in case we messed up bad
                 console.log(jqXhr);
                 console.log(status);

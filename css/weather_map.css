@@ -52,6 +52,13 @@
     width: 5em;
 }
 
+#welcome-message {
+    color: #ececec;
+    text-shadow: 2px 1px blue;
+    font-family: 'Righteous', cursive;
+    font-size: 45px;
+}
+
 /*fonts
 
 font-family: 'Anton', sans-serif;
