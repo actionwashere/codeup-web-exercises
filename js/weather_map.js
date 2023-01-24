@@ -4,7 +4,7 @@ $(document).ready(function (){
     mapboxgl.accessToken = keys.mapbox;
     let map = new mapboxgl.Map({
         container: 'map-here', // container ID
-        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        style: 'mapbox://styles/aharownjackson/cldatdi56001901s1fzg583pf', // style URL
         center: [-118.2437 ,34.0522], // starting position [lng, lat]
         zoom: 10// starting zoom
     });
