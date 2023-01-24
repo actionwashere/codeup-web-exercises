@@ -51,3 +51,8 @@ function reverseGeocode(coordinates, token) {
             return data.features[0].place_name;
         });
 }
+
+
+// geocode syntax
+//
+// geocode(${enter address here}, keys.mapbox).then(function (data) {});
