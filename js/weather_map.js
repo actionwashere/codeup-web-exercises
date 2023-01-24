@@ -65,6 +65,19 @@ $(document).ready(function (){
             currentMarker.push(newMarker); // pushes new marker to currentMarker array
             console.log(currentMarker);
 
+
+
         });
     });
-});
+
+    currentMarker.on(`dragend`, drag) // supposed to allow the current marker to be draggable
+
+    function drag(){ // supposed to center the map where user drops the marker
+        let lnglat = currentMarker.getLngLat();
+        console.log(lnglat)
+
+        map.flyTo({
+            center: [lnglat.lng, lnglat.lat],
+            essential: true
+        })
+}});
