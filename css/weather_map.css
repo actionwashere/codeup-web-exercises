@@ -1,4 +1,10 @@
 /*Class tags*/
+.page-wrapper {
+    background-image: url("../img/pngtree-blue-cartoon-sky-background-cloud-image_418494.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .map-container{
     display: flex;
     flex-direction: column;
