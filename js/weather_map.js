@@ -14,7 +14,7 @@ $(document).ready(function (){
     $(`#search-btn`).on(`click`, function (e) {
         e.preventDefault();
 
-        if (currentMarker !==null) { // checks to see if there are any markers on the map and removes them
+        if (currentMarker !== null) { // checks to see if there are any markers on the map and removes them
             for (let i = currentMarker.length - 1; i >= 0; i--) {
                 currentMarker[i].remove();
             }
@@ -35,7 +35,7 @@ $(document).ready(function (){
                 for (let i = 0; i < data.list.length; i += 8) { // loops through weather data and adds html to html string
                     console.log(data.list[i]);
                     let newDate = new Date(data.list[i].dt * 1000); // converts dt into readable data and stores in variable newDate
-                    html += `<div class="card d-flex col-2 ms-2 mt-5 item-border">
+                    html += `<div class="card d-flex col-2 ms-2 mt-5 item-border" id="weather-card">
                 <div class="card-header d-flex justify-content-center">
                     ${newDate.toLocaleDateString(`en-us`, {weekday: 'short'})} - ${newDate.toLocaleDateString(`en-us`)}
                 </div>
@@ -50,6 +50,7 @@ $(document).ready(function (){
             </div>`
                 } // end of html writing
                 $(`#current-weather`).html(html); // writes html into page
+                $(`#weather-card`).fadeIn(3000) // supposed to fade in the weather cards but not working properly
                 $(`#welcome-message`).html(`<span class="kavoon-font"> ${data.city.name}</span>`) // adds city name to top of page
             }).fail(function (jqXhr, status, error) { // in case we messed up bad
                 console.log(jqXhr);
@@ -70,14 +71,14 @@ $(document).ready(function (){
         });
     });
 
-    currentMarker.on(`dragend`, drag) // supposed to allow the current marker to be draggable
-
-    function drag(){ // supposed to center the map where user drops the marker
-        let lnglat = currentMarker.getLngLat();
-        console.log(lnglat)
-
-        map.flyTo({
-            center: [lnglat.lng, lnglat.lat],
-            essential: true
-        })
-}});
+    // currentMarker.on(`dragend`, drag) // supposed to allow the current marker to be draggable
+    //
+    // function drag(){ // supposed to center the map where user drops the marker
+    //     let lnglat = currentMarker.getLngLat();
+    //     console.log(lnglat)
+    //
+    //     map.flyTo({
+    //         center: [lnglat.lng, lnglat.lat],
+    //         essential: true
+    //     })
+});
