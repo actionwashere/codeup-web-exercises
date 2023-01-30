@@ -1,0 +1,11 @@
+.page-wrapper {
+    min-height: 100vh;
+}
+
+.main-container {
+    min-height: 100vh;
+}
+
+.color-change {
+    background: blue;
+}
