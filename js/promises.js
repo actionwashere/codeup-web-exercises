@@ -16,8 +16,8 @@
         try {
          let events = await getEvents(`${username}`);
          let lastCommit = events[0].created_at;
-         let date = new Date(`${lastCommit}`)
-         return `${username}'s last commit was on: ${date.toLocaleDateString()}`;
+         let date = new Date(`${lastCommit}`);
+         return `${username}'s last commit was on: ${date.toLocaleDateString()} @ ${(lastCommit).slice(11)}`;
         } catch(error) {
             console.log(error)
         }
@@ -28,7 +28,7 @@
 
 
 
-    let lastCommit = await getLastCommit(`aharownjackson`);
+    let lastCommit = await getLastCommit(`jonaGonzo`);
     console.log(lastCommit);
 
     // let events = await getEvents(`aharownjackson`);
