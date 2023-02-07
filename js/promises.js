@@ -5,7 +5,7 @@
             let response = await fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': `token ${keys.gitHub}`}});
             // console.log(response);
             let data = await response.json();
-            // console.log(data);
+            console.log(data);
             return data;
         } catch(error) {
             console.log(error);
@@ -22,6 +22,8 @@
             console.log(error)
         }
     }
+
+    // console.log(getEvents(`Hilton-chris210`))
 
     let lastCommit = await getLastCommit(`aharownjackson`);
     console.log(lastCommit);
